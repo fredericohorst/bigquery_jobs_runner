@@ -1,0 +1,11 @@
+version: "3"
+services: 
+    fanta: 
+        image: alcaline
+        environment: 
+            sql_file: hello_world.sql 
+            GOOGLE_CLOUD_PROJECT: # project name
+            dataset: # dataset name 
+            table: hello_world
+        volumes: 
+            - ~/.config/gcloud:/root/.config/gcloud
